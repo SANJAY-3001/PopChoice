@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* font-family: "Roboto Slab", sans-serif;
+    font-family: "Carter One", sans-serif; */
+}
