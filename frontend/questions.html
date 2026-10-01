@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>PopChoice Questions</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/questions.css">
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <p id="error"></p>
+                <img src="assets/icons/PopChoice_Icon.png" alt="Cute popcorn character">
+                <h1 id="question-no">1</h1>
+            </header>
+            <main>
+                <form id="questionnaries-form">
+                    <div class="form-group">
+                        <label for="favorite-movie">What’s your favorite movie and why?</label>
+                        <textarea
+                        id="favorite-movie"
+                        name="favorite-movie"
+                        rows="3"
+                        placeholder="The Shawshank Redemption Because it taught me to never give up hope no matter how hard life gets"
+                        ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p class="question-label">Are you in the mood for somethingnew or a classic?</p>
+                        <div class="choices-container" id="mood-age-group">
+                            <button type="button" class="choice-btn">New</button>
+                            <button type="button" class="choice-btn">Classic</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p class="question-label">What are you in the mood for?</p>
+                        <div class="choices-container" id="mood-type-group">
+                            <button type="button" class="choice-btn">Fun</button>
+                            <button type="button" class="choice-btn">Serious</button>
+                            <button type="button" class="choice-btn">Inspiring</button>
+                            <button type="button" class="choice-btn">Scary</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="island-companion">Which famous film person would you love to be stranded on an island with and why?</label>
+                        <textarea
+                        id="island-companion"
+                        name="island-companion"
+                        rows="3"
+                        placeholder="Tom Hanks because he is really funny and can do the voice of Woody"
+                        ></textarea>
+                    </div>
+
+                    <button type="button" class="btn primary-btn" id="nxt-btn">Next Person</button>
+                </form>
+            </main>
+        </div>
+    </body>
+    <script src="js/questions.js" type="module"></script>
+</html>

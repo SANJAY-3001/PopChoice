@@ -1,0 +1,71 @@
+/* Questions css */
+
+.container {
+    height: auto;
+}
+
+p {
+    margin: 0;
+}
+
+header h1 {
+    font-family: inherit;
+    font-size: 3.125rem;
+    font-weight: 700;
+}
+
+form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    background-color: #3B4877;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 0.5em;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #FFFFFF;
+}
+
+label , p {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.choices-container {
+    margin-top: 0.5em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.choice-btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    background-color: #3B4877;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+}
+
+.choice-btn.selected {
+    background-color: #58cc82; 
+    color: #1a1a2e; 
+    border-color: #58cc82;
+    font-weight: bold;
+}

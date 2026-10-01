@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>PopChoice</title>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-
+        <div class="container">
+            <header>
+                <p id="error"></p>
+                <img src="assets/icons/PopChoice_Icon.png" alt="Cute popcorn character">
+                <h1>PopChoice</h1>
+            </header>
+            <main>
+                <form id="info-form">
+                    <input 
+                    type="number"
+                    placeholder="How many people?"
+                    id="no-people"
+                    name="no-people"
+                    aria-label="no-people"
+                    required
+                    >
+                    <input 
+                    type="text"
+                    placeholder="How much time do you have?"
+                    id="time"
+                    name="time"
+                    aria-label="time"
+                    required
+                    >
+                    <button type="button" class="btn primary-btn" id="start-btn">Start</button>
+                </form>
+            </main>
+        </div>
     </body>
+    <script src="js/app.js" type="module"></script>
 </html>
