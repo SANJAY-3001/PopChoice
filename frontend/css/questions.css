@@ -1,5 +1,9 @@
 /* Questions css */
 
+.container {
+    height: auto;
+}
+
 p {
     margin: 0;
 }

@@ -12,11 +12,12 @@
     <body>
         <div class="container">
             <header>
+                <p id="error"></p>
                 <img src="assets/icons/PopChoice_Icon.png" alt="Cute popcorn character">
                 <h1 id="question-no">1</h1>
             </header>
             <main>
-                <form>
+                <form id="questionnaries-form">
                     <div class="form-group">
                         <label for="favorite-movie">What’s your favorite movie and why?</label>
                         <textarea
@@ -29,7 +30,7 @@
                     
                     <div class="form-group">
                         <p class="question-label">Are you in the mood for somethingnew or a classic?</p>
-                        <div class="choices-container">
+                        <div class="choices-container" id="mood-age-group">
                             <button type="button" class="choice-btn">New</button>
                             <button type="button" class="choice-btn">Classic</button>
                         </div>
@@ -37,7 +38,7 @@
                     
                     <div class="form-group">
                         <p class="question-label">What are you in the mood for?</p>
-                        <div class="choices-container">
+                        <div class="choices-container" id="mood-type-group">
                             <button type="button" class="choice-btn">Fun</button>
                             <button type="button" class="choice-btn">Serious</button>
                             <button type="button" class="choice-btn">Inspiring</button>
@@ -55,10 +56,10 @@
                         ></textarea>
                     </div>
 
-                    <button class="btn primary-btn">Next Person</button>
+                    <button type="button" class="btn primary-btn" id="nxt-btn">Next Person</button>
                 </form>
             </main>
         </div>
     </body>
-    <script src="js/questions.js"></script>
+    <script src="js/questions.js" type="module"></script>
 </html>

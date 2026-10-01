@@ -13,7 +13,7 @@ body {
     background-color: #000C36;
     color: #FFFFFF;
     width: 493px;
-    height: 852px;
+    height: 652px;
     margin: 10px auto;
     padding: 2.0625em 3.125em;
     display: flex;
@@ -53,6 +53,7 @@ input {
     text-align: center;
 }
 
+
 input:focus {
     outline: none;
 }
@@ -81,7 +82,19 @@ input::-webkit-inner-spin-button {
     padding: 0.6em 0;
 }
 
+.btn:hover {
+    transform: scale(1.05)
+}
+
 .primary-btn {
     background-color: #51E08A;
     color: #000C36;
+}
+
+
+/* Error msg */
+
+#error {
+    color: #51E08A;
+    font-size: 1.2rem;
 }
