@@ -1,3 +1,4 @@
+import markDownToSafeHtml from "../services/markdown.service.js";
 import { recommendMovies } from "../services/recommendation.service.js";
 
 
@@ -23,9 +24,11 @@ export default async function getRecommendations(req ,  res , next) {
 
         const result = await recommendMovies(movieSession)
 
-        res.status(200).status({
+
+
+        res.status(200).json({
             success : true,
-            result : result
+            result : markDownToSafeHtml(result.recommendations)
         })
 
     }

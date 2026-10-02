@@ -10,7 +10,7 @@ export default async function retrieveMovies(searchQuery) {
 
         const { data , error } = await supabase.rpc("match_movies" , 
             {
-                query_embeddings : embbedings,
+                query_embedding : embbedings,
                 match_threshold : 0.60,
                 match_count : 5
             }

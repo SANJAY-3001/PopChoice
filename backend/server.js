@@ -1,5 +1,6 @@
 import express from "express"
-import { recommedationsRoutes } from "./routes/recommendation.routes.js"
+import cors from "cors"
+import  recommedationsRoutes  from "./routes/recommendation.routes.js"
 import { errorHandler } from "./middleware/error.middleware.js"
 
 const app = express()
@@ -17,7 +18,8 @@ app.get("/api/health" , async(req , res) => {
 })
 
 
-app.post("/api" , recommedationsRoutes)
+
+app.use("/api" , recommedationsRoutes)
 
 app.use(errorHandler)
 

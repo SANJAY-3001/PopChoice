@@ -22,9 +22,9 @@ export default function buildMoviePrompt(preferences , movies) {
     Recommend movies only from the provided movie database context.
 
     Consider:
-    - Genre
-    - Language
-    - Mood
+    - Favorite Movie
+    - Mood Age
+    - Mood Type
     - Available time
     - Preferences of all people
 
