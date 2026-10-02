@@ -1,4 +1,4 @@
-import { recommendMovies } from "../services/recommendation.service";
+import { recommendMovies } from "../services/recommendation.service.js";
 
 
 export default async function getRecommendations(req ,  res , next) {

@@ -1,6 +1,6 @@
 import express from "express"
-import { recommedationsRoutes } from "./routes/recommendation.routes"
-import { errorHandler } from "./middleware/error.middleware"
+import { recommedationsRoutes } from "./routes/recommendation.routes.js"
+import { errorHandler } from "./middleware/error.middleware.js"
 
 const app = express()
 

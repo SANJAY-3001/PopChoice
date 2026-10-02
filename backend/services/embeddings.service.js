@@ -1,4 +1,4 @@
-import { googleGenAI } from "../config/config"
+import { googleGenAI } from "../config/config.js"
 
 export default async function createEmbeddings(text) {
     try {

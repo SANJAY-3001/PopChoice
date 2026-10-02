@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import { createClient } from "@supabase/supabase-js/dist/index.cjs";
+import { createClient, SupabaseClient } from "@supabase/supabase-js/dist/index.cjs";
 import { OpenAI } from "openai/client.js";
 
 

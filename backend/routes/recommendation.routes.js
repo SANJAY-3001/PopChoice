@@ -1,5 +1,5 @@
 import express from "express"
-import getRecommendations from "../controllers/recommendation.controller"
+import getRecommendations from "../controllers/recommendation.controller.js"
 
 const router = express.Router()
 

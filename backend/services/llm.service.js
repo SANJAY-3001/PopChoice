@@ -1,5 +1,5 @@
-import { openai } from "../config/config";
-import buildMoviePrompt from "../utils/prompt";
+import { openai } from "../config/config.js";
+import buildMoviePrompt from "../utils/prompt.js";
 
 
 export default async function generateRecommendations(preferences , movies) {

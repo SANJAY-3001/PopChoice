@@ -1,5 +1,5 @@
-import { supabase } from "../config/config";
-import createEmbeddings from "./embeddings.service";
+import { supabase } from "../config/config.js";
+import createEmbeddings from "./embeddings.service.js";
 
 
 

@@ -1,22 +1,35 @@
-import { supabase } from "../config/config";
-import createEmbeddings from "../services/embeddings.service";
-import splitDocument from "../services/splitDocument.service";
+import { supabase } from "../config/config.js";
+import createEmbeddings from "../services/embeddings.service.js";
+import splitDocument from "../services/splitDocument.service.js";
 
 
 async function storeEmbeddings() {
-    const chukData = splitDocument("data/movies.txt")
+    const chukData = await splitDocument("data/movies.txt")
 
     try {
-        const data = await Promise.all(
-            chukData.map(async textChunk => {
-                const embbeding = await createEmbeddings(textChunk.pageContent)
+        // this code gives rate limit exceeded
 
-                return {
-                    content : textChunk.pageContent,
-                    embbeding : embbeding
-                }
+        // const data = await Promise.all(
+        //     chukData.map(async textChunk => {
+        //         const embbeding = await createEmbeddings(textChunk.pageContent)
+
+        //         return {
+        //             content : textChunk.pageContent,
+        //             embbeding : embbeding
+        //         }
+        //     })
+        // )
+
+        const data = []
+
+        for (const textChunk of chukData) {
+            const embedding = await createEmbeddings(textChunk.pageContent)
+
+            data.push({
+                content : textChunk.pageContent,
+                embedding : embedding
             })
-        )
+        }
 
         const { error } = await supabase.from("movies").insert(data)
 

@@ -1,5 +1,5 @@
-import generateRecommendations from "./llm.service";
-import retrieveMovies from "./rag.service";
+import generateRecommendations from "./llm.service.js";
+import retrieveMovies from "./rag.service.js";
 
 
 export async function recommendMovies(movieSession) {
