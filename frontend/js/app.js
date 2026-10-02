@@ -25,7 +25,7 @@ startBtn.addEventListener('click' , () => {
 
         currentPerson : 1,
 
-        answer : []
+        answers : []
     }
 
     saveSession(movieSession)

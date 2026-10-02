@@ -5,6 +5,8 @@ let movieSession = getSession()
 if (!movieSession) window.location.href = 'index.html'
 
 
+
+
 displayQuestions()
 
 
@@ -12,7 +14,6 @@ const nxtBtn = document.getElementById("nxt-btn")
 nxtBtn.addEventListener('click' , async() => {
     const answers = getFormData()
 
-    console.log(answers)
 
     if(!allQuestionsAnswered(answers)) {
         const error = document.getElementById("error")
@@ -26,7 +27,7 @@ nxtBtn.addEventListener('click' , async() => {
     }
 
 
-    movieSession.answer.push({
+    movieSession.answers.push({
         person : movieSession.currentPerson,
         answers : answers
     })
@@ -111,6 +112,8 @@ function displayQuestions() {
 
 async function sendToBackEnd() {
     try {
+        console.log("Sending to backend:", JSON.stringify(movieSession, null, 2))
+
         const response = await fetch("http://localhost:3001/api/recommend" , {
             method : "POST",
             headers : {
@@ -123,13 +126,13 @@ async function sendToBackEnd() {
             throw new Error("Failed to recommend movie now")
         }
 
-        const result = response.json()
+        const result = await response.json()
 
         sessionStorage.setItem("recommendations" , 
             JSON.stringify(result)
         )
 
-        window.location.href = '.movies.html'
+        window.location.href = 'movies.html'
 
     }
     catch (err) {
